@@ -25,6 +25,7 @@ return new class extends Migration
             $table->timestamp('arrived_at')->nullable();
             $table->timestamps();
         });
+       
     }
 
     /**
@@ -35,5 +36,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('flights');
+       
     }
 };

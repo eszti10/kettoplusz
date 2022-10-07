@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
+
 Route::get('/', function () {
     $user = "Andras";
     return view('welcome', [
@@ -20,7 +20,7 @@ Route::get('/', function () {
         'name' => $user
     ]);
 });
-
+/*
 Route::get('/aloldal', function () {
     return view('aloldal');
 });
@@ -64,3 +64,5 @@ Route::get('/post/{post}', function ($post) {
 
 
 Route::get("/posts/{post}", [App\Http\Controllers\PostController::class, "show"]);
+
+Route::get("/{sajatnev}", [App\Http\Controllers\sajatController::class, "show"]);

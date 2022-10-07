@@ -14,4 +14,6 @@ class PostController extends Controller
        //dd($s);
       return view('post', compact('post'));
     }
+
+   
 }
