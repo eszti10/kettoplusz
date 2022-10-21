@@ -5,13 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Flight extends Model
+class City extends Model
 {
     use HasFactory;
 
-    
-    public function flight()
-    {
-        return $this->belongToMany(flight::class);
-    }
+  
 }

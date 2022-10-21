@@ -22,10 +22,12 @@ return new class extends Migration
             $table->boolean('active')->default(false);
             $table->boolean('delayed')->default(false);
             $table->boolean('departed')->default(false);
-            $table->timestamp('arrived_at')->nullable();
+            $table->timestamp('arrived_at')->nullable();  
+            $table->unsignedBigInteger("airlineid");         
             $table->timestamps();
+           
+            $table->foreign("airlineid")->references("id")->on("airlines")->onDelete("cascade")->onUpdate("cascade");
         });
-       
     }
 
     /**
@@ -36,6 +38,5 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('flights');
-       
     }
 };
