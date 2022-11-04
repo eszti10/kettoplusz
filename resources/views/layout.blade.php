@@ -21,6 +21,7 @@
   <li><a class="{{Request::path() === '/' ? 'active' : ''}}" href="/">Kezdő oldal</a></li>
   <li><a class="{{Request::path() === '/Eszter' ? 'active' : ''}}" href="/Eszter">Órai feladatok</a></li>
   <li><a class="{{Request::path() === '/legitarsasag/create' ? 'active' : ''}}" href="/legitarsasag/create">Új légitársaság</a></li>
+  <li><a class="{{Request::path() === '/varos/create' ? 'active' : ''}}" href="/varos/create">Varos</a></li>
 
  </ul>
 </nav>

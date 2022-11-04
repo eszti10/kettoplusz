@@ -13,4 +13,5 @@
     </div>
     <button type="submit" class="btn btn-primary">Küldés</button>
   </form>
+
 @endsection

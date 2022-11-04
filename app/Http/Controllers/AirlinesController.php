@@ -4,9 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Airline;
+use Illuminate\Support\Facades\DB;
+
 
 class AirlinesController extends Controller
 {
+    public function index()
+    {
+        $adat = DB::table('airlines')
+        ->select('*')
+        ->get();
+        return view('airlines.index',compact('adat'));
+    }
+    public function show($re)
+    {
+        $adat=DB::table('flights')
+        ->select('*')
+        ->where('airlineid','=',$re)
+        ->get();
+        return view('airlines.show',compact('adat'));
+    }
     public function postcreate()
     {
         return view("airlines.create");

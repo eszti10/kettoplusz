@@ -72,5 +72,20 @@ Route::get('/post/{post}', function ($post) {
 Route::get("/flights/{flight}", [App\Http\Controllers\FlightsController::class, "show"]);
 
 
+
+Route::get("/utasok/create", [App\Http\Controllers\PassengerController::class, "create"]);
+
+Route::get("/utasok/{utas}", [App\Http\Controllers\PassengerController::class, "show"]);
+Route::post("/utasok", [App\Http\Controllers\PassengerController::class, "store"]);
+
+
+Route::get("/legitarsasag", [App\Http\Controllers\AirlinesController::class, "index"]);
+Route::get("/legitarsasag/{legi}", [App\Http\Controllers\AirlinesController::class, "show"]);
+
 Route::get("/legitarsasag/create", [App\Http\Controllers\AirlinesController::class, "postcreate"]);
 Route::post("/legitarsasag", [App\Http\Controllers\AirlinesController::class, "store"]);
+
+Route::get("/varos/create", [App\Http\Controllers\CityController::class, "postcreate"]);
+Route::post("/varos", [App\Http\Controllers\CityController::class, "store"]);
+
+
